@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elusive Button</title>
+	<style>
+		button {
+			padding: 20px;
+			background-color: #e6e6ff;
+			color: #333;
+			border-radius: 8px;
+			border: 1px solid #0000ff;
+			font-size: 36px;
+			position: fixed;
+		}
+	</style>
+
+</head>
+<body>
+	<h1>Elusive Button</h1>
+
+	<button id="my-button"> Try me!</button>
+
+<script>
+	let mouseHover = 0;
+	const button = document.getElementById('my-button');
+
+	button.onmouseover = function(){
+		if (mouseHover < 9) {
+		button.style.left = (Math.random() * 100).toString() + "%";
+		button.style.top = (Math.random() * 100).toString() + "%";
+	} else {
+		button.style.left = '50%';
+		button.style.top = '50%';
+	}
+}
+
+</script>
+</body>
+</html>
